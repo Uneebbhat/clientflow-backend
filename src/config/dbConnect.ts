@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
 import { MONGO_URI } from "./constants";
-import { Response } from "express";
 
 const MONGODB_URI = MONGO_URI as string;
 
-const dbConnect = async (res: Response) => {
+const dbConnect = async () => {
   try {
     const conn = await mongoose.connect(MONGODB_URI);
     console.log(`Connection established: ${conn.connection.host}`);
