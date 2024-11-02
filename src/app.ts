@@ -1,5 +1,8 @@
-import express, { Application } from 'express'
+import express, { Application } from "express";
+import dbConnect from "./config/dbConnect";
 
-const app: Application = express()
+const app: Application = express();
 
-export default app
+dbConnect();
+
+export default app;

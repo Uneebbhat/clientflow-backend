@@ -1,7 +1,11 @@
-import app from './app'
+import { config } from "dotenv";
+import app from "./app";
+import { PORT } from "./config/constants";
 
-const PORT = 5000
+config();
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`)
-})
+const port = PORT;
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
